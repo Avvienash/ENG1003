@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Insert the title-->
+        <title>Assignment 1a</title>
+        <!--Add CSS-->
+        <style type="text/css">
+            div 
+            {
+	            padding-bottom: 10px;
+            }
+        </style>
+        <script src="js/main.js"></script> <!--Link to Javascript file-->
+    </head>
+    <body>
+
+        <div>
+         <h1>Room Booking Page</h1> 
+         <h4>Time: <span id="timeNow"></span>  </h4> 
+        </div>
+        <div>
+            <label for="inputTime">Start Time:</label>
+            <select id="inputTime">
+                <option value="0"></option>
+                <option value="8">8am</option>
+                <option value="9">9am</option>
+                <option value="10">10am</option>
+                <option value="11">11am</option>
+                <option value="12">12pm</option>
+                <option value="13">1pm</option>
+                <option value="14">2pm</option>
+                <option value="15">3pm</option>
+                <option value="16">4pm</option>
+                <option value="17">5pm</option>
+            </select>
+        </div>
+        <div>
+            <label for="inputReason">Booking Reason:</label>
+            <input type="text" id="inputReason">
+        </div>
+        <div>
+            <label for="inputLabel">Booking text to be shown:</label>
+            <input type="text" id="inputLabel">
+        </div>
+        <div>
+            <!--Run function when button clicked-->
+            <button onclick="doBooking()">Book Room</button> 
+        </div>
+        <div>
+            <h3>Room Booking Status</h3>
+            <div id="output"></div>
+        </div>
+        <!--Run function when button clicked-->
+        <button onclick="clearAllBookings()">Clear All Bookings</button>
+
+        <!--Run JavaScript Functions-->
+        <script type="text/javascript" language="JavaScript"> 
+            // Run code every 1000 ms
+            updateDayTime();
+            updateDisplay();
+            setInterval(updateDayTime,1000); 
+            setInterval(updateDisplay,1000);
+        </script>
+    </body>
+</html>
