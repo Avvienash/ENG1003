@@ -1,4 +1,4 @@
-# Room Booking System README
+# Room Booking System
 
 ## Project Overview
 
